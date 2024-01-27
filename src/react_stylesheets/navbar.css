@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    /* background-color: lightgray; */
+    /* position: relative;
+    z-index: 0; */
+}
+
+/* #navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: lightgray;
+} */
+
+#menu {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.menu_list {
+    list-style-type: none;
+    margin: 0 1rem;
+}
+
+.link {
+    text-decoration: none;
+    /* color: black; */
+}
+
+.home {
+    font-size: 1.5rem;
+}
+
+/* BTN COLOR */
+.color_Btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    margin: 0 0.25rem;
+    background-color: transparent;
+}
+
+.color_box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+#colorBox_1 {
+    background: #493B42;
+}
+
+#colorBox_2 {
+    background: #222F1E;
+}
+
+#colorBox_3 {
+    background: #2F291C;
+}
+
+#colorBox_4 {
+    background: #fff;
+    border: 2px solid;
+}
+
+/* NEW CSS */
+.text-default {
+    color: white;
+}
+
+.text-dark {
+    color: black;
+}
+
+.background-default {
+    background-color: lightgrey;
+}
+
+.background-dark {
+    background-color: black;
+}
