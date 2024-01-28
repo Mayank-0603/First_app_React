@@ -14,18 +14,12 @@ export default function MyForm(props) {
     }
 
     function countWords(sentence) {
-        const words = sentence
-            .replace(/\[.,\/#!%\^&\*;:{}=-_`~()]/g, "")
-            .split(/\s+/g);
-        if (words.includes("[]")) {
-            words.pop("[]");
-        }
-
-        else if (words.includes("$")) {
-            words.pop("$");
-        }
+        const filter_1 = sentence.replace(/[.,\/#!$%\^&\*;:=\-_`]/g, ""); // FILTER FOR EXPRESSIONS
+        const filter_2 = filter_1.replace(/[[\]{\}(\)]/g, ""); //FILTER FOR BRACKETS
+        const words = filter_2.split(" ");
         return words.length;
     }
+    
     return (
         <div id='form_section'>
             <h2 id='heading' className={`text_left text-${props.mode === "default" ? "dark" : "default"}`}>My demo form</h2>
