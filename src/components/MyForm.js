@@ -25,7 +25,7 @@ export default function MyForm(props) {
         <div id='form_section'>
             <h2 id='heading' className={`text_left text-${props.mode === "default" ? "dark" : "default"}`}>My demo form</h2>
             <div id="text_part">
-                <label htmlFor="myBox_1" className={`form_label text_left text_left text-${props.mode === "default" ? "dark" : "default"}`}>Example textarea</label>
+                <label htmlFor="myBox_1" className={`form_label text_left text_left text-${props.mode === "default" ? "dark" : "default"}`}><strong>Example textarea</strong></label>
                 <textarea name="userText" id="myBox_1" className={`background_${props.mode} text_left text-${props.mode === "default" ? "dark" : "default"}`} rows="10" onChange={enterText} value={text}></textarea>
             </div>
             <div id="font_section" className='text_left'>
