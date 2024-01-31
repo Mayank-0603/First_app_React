@@ -14,10 +14,10 @@ export default function MyForm(props) {
     }
 
     function countWords(sentence) {
-        const filter_1 = sentence.replace(/\[.,\/#!$%\^&\*;:=-_`]/g, ""); // FILTER FOR EXPRESSIONS
-        const filter_2 = filter_1.replace(/[[\]{}()]/g, ""); //FILTER FOR BRACKETS
-        const words_set = filter_2.split(/\s+/); //SPLITTING WORDS ON BASIS OF SPACES
-        const words = words_set.filter((item) => { return item.length !== 0 })
+        let regex = /[^a-zA-Z0-9 ]/g; // FILTER
+        const filter_1 = sentence.replace(regex, ""); // FILTER FOR EXPRESSIONS
+        const words_set = filter_1.split(/\s+/); //SPLITTING WORDS ON BASIS OF SPACES
+        const words = words_set.filter((item) => { return item.length !== 0 });
         return words.length;
     }
     
