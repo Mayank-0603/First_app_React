@@ -17,7 +17,7 @@ export default function MyForm(props) {
         let regex = /[^a-zA-Z0-9 ]/g; // FILTER
         const filter_1 = sentence.replace(regex, ""); // FILTER FOR EXPRESSIONS
         const words_set = filter_1.split(/\s+/); //SPLITTING WORDS ON BASIS OF SPACES
-        const words = words_set.filter((item) => { return item.length !== 0 });
+        const words = words_set.filter((item) => { return item.length !== 0 }); // REMOVING EXTRA SPACES
         return words.length;
     }
     
